@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
+import NextAuthSessionProvider from "./provider";
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -13,10 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="mx-6 md:mx-10">
-          <Header />
-          {children}
-        </div>
+        <NextAuthSessionProvider>
+          <div className="mx-6 md:mx-10">
+            <Header />
+            {children}
+          </div>
+        </NextAuthSessionProvider>
       </body>
     </html>
   );

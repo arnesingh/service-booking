@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-function CategoryList({ categoryLsit }) {
+function CategoryList({ categoryList }) {
   return (
     <div className="mx-4 md:mx-22 lg:mx-52 grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-6">
-      {categoryLsit.length > 0
-        ? categoryLsit.map((category, index) => (
+      {categoryList.length > 0
+        ? categoryList.map((category, index) => (
             <div
               key={index}
               className={`flex flex-col justify-center items-center gap-2 bg-purple-50 p-5 rounded-lg cursor-pointer hover:scale-110 hover:transition-all ease-in-out`}
