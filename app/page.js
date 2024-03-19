@@ -23,8 +23,8 @@ export default function Home() {
 
   const getAllBusinessList = () => {
     GlobalApi.getAllBusiness().then((resp) => {
-      //setBusinessList(resp.businessLists);
-      console.log(resp.businessLists);
+      setAllBusinessList(resp.businessLists);
+      //console.log(resp.businessLists);
     });
   };
 
